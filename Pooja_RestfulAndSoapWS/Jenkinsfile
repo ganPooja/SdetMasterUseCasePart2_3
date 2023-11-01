@@ -3,21 +3,21 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                dir("Pooja-RestfulAndSoapWS") {
+                dir("Pooja_RestfulAndSoapWS") {
 		bat "mvn clean"
 	}
             }
         }
         stage('Compile') {
             steps {
-	dir("Pooja-RestfulAndSoapWS") {
+	dir("Pooja_RestfulAndSoapWS") {
 		bat "mvn compile"
 	}
             }
         }
         stage('Test') {
             steps {
-	dir("Pooja-RestfulAndSoapWS") {
+	dir("Pooja_RestfulAndSoapWS") {
 		bat "mvn test"
 	}
             }
