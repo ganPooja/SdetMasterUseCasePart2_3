@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clean') {
+            steps {
+                dir("Pooja-RestfulAndSoapWS") {
+		bat "mvn clean"
+	}
+            }
+        }
+        stage('Compile') {
+            steps {
+	dir("Pooja-RestfulAndSoapWS") {
+		bat "mvn compile"
+	}
+            }
+        }
+        stage('Test') {
+            steps {
+	dir("Ravi_RestfulAndSoapWS") {
+		bat "mvn test"
+	}
+            }
+        }
+        stage('Result') {
+            steps {
+                echo "Result"
+            }
+        }
+    }
+}
