@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-	dir("Ravi_RestfulAndSoapWS") {
+	dir("Pooja-RestfulAndSoapWS") {
 		bat "mvn test"
 	}
             }
